@@ -6,10 +6,11 @@ from .serializers import FileUploadSerializer
 from accounts.models import Account, Client, Consumer
 from django.core.paginator import Paginator
 from .utils import Utils
+from django.db.models import F
 
 
 @api_view(["POST"])
-def save_csv_data(request):
+def save_csv(request):
     try:
         serializer = FileUploadSerializer(data=request.data)
         if serializer.is_valid():
@@ -74,6 +75,8 @@ def get_accounts(request):
 
     if status_type:
         accounts = accounts.filter(status=status_type.upper())
+
+    accounts = accounts.order_by(F("id").asc())
 
     paginator = Paginator(accounts, per_page)
     page = paginator.get_page(page_number)

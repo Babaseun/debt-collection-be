@@ -1,5 +1,6 @@
 from accounts.models import StatusType
 
+
 class Utils:
     @staticmethod
     def parse_status(status_str):
