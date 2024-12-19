@@ -59,7 +59,7 @@ You can test the API using [curl](https://curl.se/) or any API testing tool like
    [Download the CSV file](consumers_balances.csv)
 
 
-  ![Alt text](Screenshot 2024-12-18 at 10.10.53 PM.png)
+  ![Alt text](Screenshot%202024-12-18%20at%2010.10.53 PM.png)
 
 
 2. Get Accounts:
