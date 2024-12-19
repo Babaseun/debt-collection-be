@@ -10,8 +10,14 @@ django-environ = "*"
 python-decouple = "*"
 psycopg2-binary = "*"
 black = "*"
+zappa = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-django = "*"
+factory-boy = "*"
+coverage = "*"
+responses = "*"
 
 [requires]
 python_version = "3.12"
